@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #4502c7;
+  --text-color: #25282b;
 }
 
 * {
@@ -12,6 +13,14 @@
 body {
   margin: 0;
   background-color: #f8f8f8;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
 }
 
 /* Container */
@@ -79,3 +88,117 @@ body {
   }
 }
 /* End Top Header */
+
+/* Header */
+.header {
+  background-color: #ffffff;
+  padding: 12px 0;
+}
+
+.header .inner-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .inner-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.header .inner-menu > ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  gap: 5px 40px;
+}
+
+.header .inner-menu > ul > li {
+  position: relative;
+}
+
+.header .inner-menu > ul > li > a {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.header .inner-menu > ul > li > a.active,
+.header .inner-menu > ul > li > a:hover {
+  color: var(--primary-color);
+}
+
+.header .inner-menu > ul > li > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  width: 280px;
+  z-index: 999;
+  display: none;
+}
+
+.header .inner-menu > ul > li:hover > ul {
+  display: block;
+}
+
+.header .inner-menu > ul > li > ul > li > a {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px 22px;
+  display: block;
+  text-transform: capitalize;
+}
+
+.header .inner-menu > ul > li > ul > li > a.active,
+.header .inner-menu > ul > li > ul > li > a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.header .inner-cart a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header .inner-cart img {
+  height: 26px;
+  width: auto;
+}
+
+.header .inner-cart span {
+  background-color: #ff3904;
+  display: inline-block;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 1px 5px;
+  margin-left: 5px;
+  position: relative;
+}
+
+.header .inner-cart span::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 1.9px solid transparent;
+  border-bottom: 1.9px solid transparent;
+  border-right: 3.8px solid #ff3904;
+  position: absolute;
+  top: 6.2px;
+  left: -3.4px;
+}
+
+.header .inner-menu-mobile {
+  display: none;
+}
+/* End Header */
