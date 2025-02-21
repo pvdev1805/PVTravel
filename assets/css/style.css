@@ -201,4 +201,35 @@ img {
 .header .inner-menu-mobile {
   display: none;
 }
+
+/* Responsive Header */
+@media screen and (max-width: 1199.98px) {
+  .header .inner-menu > ul {
+    gap: 5px 24px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .header .inner-menu {
+    display: none;
+  }
+
+  .header .inner-menu-mobile {
+    display: inline-flex;
+    font-size: 22px;
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .header .inner-logo img {
+    height: 40px;
+  }
+}
+/* End Responsive Header */
+
 /* End Header */
