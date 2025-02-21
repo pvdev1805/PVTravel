@@ -20,6 +20,32 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (max-width: 1199.98px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 /* End Container */
 
 /* Top Header */
@@ -45,5 +71,11 @@ body {
 
 .top-header .inner-item i {
   font-size: 20px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .top-header {
+    display: none;
+  }
 }
 /* End Top Header */
