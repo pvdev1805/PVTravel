@@ -683,4 +683,20 @@ img {
   height: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 991.98px) {
+  .section-3 .inner-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .section-3 {
+    padding-bottom: 45px;
+  }
+
+  .section-3 .inner-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 /* End Section 3 */
