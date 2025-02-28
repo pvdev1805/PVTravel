@@ -779,3 +779,19 @@ img {
 /* End Responsive Button Outline */
 
 /* End Button Outline */
+
+/* Section 5 */
+.section-5 {
+  padding-bottom: 60px;
+}
+
+.section-5 .inner-image {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.section-5 .inner-image img {
+  width: 100%;
+  height: auto;
+}
+/* End Section 5 */
