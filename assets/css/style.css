@@ -1897,3 +1897,121 @@ img {
   cursor: pointer;
 }
 /* End Box Tour Detail */
+
+/* Box Tour Info */
+.box-tour-info {
+  margin-top: 30px;
+  box-shadow: 0px 1.75px 3.51px 0px #0000001f;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.box-tour-info .inner-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.box-tour-info .inner-content p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #080a12;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.box-tour-info .inner-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.box-tour-info .inner-read-more {
+  text-align: center;
+  margin-top: 20px;
+}
+/* End Box Tour Info */
+
+/* Box Tour Schedule */
+.box-tour-schedule {
+  margin-top: 30px;
+}
+
+.box-tour-schedule .inner-title-main {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.box-tour-schedule .inner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.box-tour-schedule .inner-list::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: calc(100% - 16px);
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 16px;
+  left: 0;
+}
+
+.box-tour-schedule .inner-item {
+  margin-left: 15px;
+  position: relative;
+}
+
+.box-tour-schedule .inner-item::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: -20px;
+}
+
+.box-tour-schedule .inner-item .inner-title {
+  display: inline-block;
+  margin-bottom: 10px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.box-tour-schedule .inner-item .inner-content {
+  box-shadow: 0px 1.75px 3.51px 0px #0000001f;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.box-tour-schedule .inner-item .inner-content p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #080a12;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.box-tour-schedule .inner-item .inner-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+/* End Box Tour Schedule */
