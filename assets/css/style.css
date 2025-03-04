@@ -1659,3 +1659,22 @@ img {
   color: #f8f6eb;
 }
 /* End Box Pagination */
+
+/* Section 10 */
+.section-10 {
+  padding: 60px 0;
+}
+
+.section-10 .inner-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-10 .inner-left {
+  width: 58%;
+}
+
+.section-10 .inner-right {
+  width: calc(42% - 20px);
+}
+/* End Section 10 */
