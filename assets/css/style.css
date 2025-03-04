@@ -1559,3 +1559,44 @@ img {
   cursor: pointer;
 }
 /* End Box Filter */
+
+/* Box Pagination */
+.box-pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.box-pagination button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--primary-color);
+  border-right-width: 0;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.box-pagination button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.box-pagination button:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.box-pagination button i {
+  font-size: 10px;
+}
+
+.box-pagination button.active,
+.box-pagination button:hover {
+  background-color: var(--primary-color);
+  color: #f8f6eb;
+}
+/* End Box Pagination */
