@@ -1460,6 +1460,65 @@ img {
   display: none;
 }
 
+/* Responsive Section 9 */
+@media screen and (max-width: 991.98px) {
+  .section-9 .inner-left {
+    display: none;
+  }
+
+  .section-9 .inner-right {
+    width: 100%;
+  }
+
+  .section-9 .inner-right .inner-sort {
+    width: 100%;
+    flex: none;
+    margin-bottom: 16px;
+  }
+
+  .section-9 .inner-filter-mobile {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .section-9 .inner-filter-mobile i {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .section-9 .inner-list-tour {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .section-9 {
+    padding: 45px 0;
+  }
+
+  .section-9 .inner-info .inner-title {
+    font-size: 24px;
+  }
+
+  .section-9 .inner-list-tour {
+    gap: 10px;
+  }
+
+  .section-9 .inner-list-tour .product-item .inner-content {
+    padding: 10px;
+  }
+}
+/* End Responsive Section 9 */
+
 /* End Section 9 */
 
 /* Box Filter */
