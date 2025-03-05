@@ -2463,3 +2463,127 @@ img {
 /* End Responsive Section 11 */
 
 /* End Section 11 */
+
+/* Section 12 */
+.section-12 {
+  padding-bottom: 60px;
+}
+
+.section-12 .inner-wrap {
+  max-width: 902px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0px 3.05px 3, 81px 0px #00000026;
+  border-radius: 18px;
+  padding: 30px 20px;
+}
+
+.section-12 .inner-title-main {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.section-12 .inner-info {
+  margin-bottom: 30px;
+}
+
+.section-12 .inner-info .inner-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 20px;
+  margin-bottom: 15px;
+}
+
+.section-12 .inner-info input,
+.section-12 .inner-info textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.section-12 .inner-info input::placeholder,
+.section-12 .inner-info textarea::placeholder {
+  color: #828282;
+}
+
+.section-12 .inner-info input {
+  height: 50px;
+}
+
+.section-12 .inner-info textarea {
+  height: 100px;
+}
+
+.section-12 .inner-method .inner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-12 .inner-method .inner-list .inner-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-12 .inner-method .inner-list .inner-item input {
+  margin: 0;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
+.section-12 .inner-method .inner-list .inner-item label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+.section-12 .inner-method .inner-info-bank {
+  background-color: #f3f3f3;
+  border-radius: 4.25px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.section-12 .inner-method .inner-info-bank .inner-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.section-12 .inner-method .inner-info-bank .inner-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4f4f4f;
+  margin-bottom: 5px;
+}
+
+.section-12 .inner-button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.section-12 .inner-button button {
+  width: 50%;
+  height: 46px;
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 8px;
+  padding: 0;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* End Section 12 */
