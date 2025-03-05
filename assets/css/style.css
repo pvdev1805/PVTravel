@@ -2586,4 +2586,28 @@ img {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+/* Responsive Section 12 */
+@media screen and (max-width: 575.98px) {
+  .section-12 {
+    padding-bottom: 45px;
+  }
+
+  .section-12 .inner-wrap {
+    padding: 20px 15px;
+  }
+
+  .section-12 .inner-title-main {
+    font-size: 16px;
+  }
+
+  .section-12 .inner-info .inner-inputs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section-12 .inner-button button {
+    width: 100%;
+  }
+}
+/* End Responsive Section 12 */
 /* End Section 12 */
