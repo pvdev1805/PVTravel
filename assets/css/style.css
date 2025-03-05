@@ -1770,6 +1770,12 @@ img {
   color: var(--primary-color);
 }
 
+.box-tour-detail .inner-product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
 .box-tour-detail .inner-product .inner-image {
   width: 132px;
   aspect-ratio: 132/98;
