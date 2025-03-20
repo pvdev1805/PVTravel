@@ -211,7 +211,73 @@ img {
 
 @media screen and (max-width: 991.98px) {
   .header .inner-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    z-index: 999;
+    transition: all 0.3s;
+  }
+
+  .header .inner-menu.active {
+    left: 0;
+  }
+
+  .header .inner-menu > ul {
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header .inner-menu > ul > li {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .header .inner-menu > ul > li > a {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .header .inner-menu > ul > li > i {
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ddd;
+  }
+
+  .header .inner-menu > ul > li:hover > ul {
     display: none;
+  }
+
+  .header .inner-menu > ul > li.active > ul {
+    display: block;
+    position: static;
+    border-top: 1px solid #ddd;
+  }
+
+  .header .inner-menu > ul > li.active > i::before {
+    content: "\f0d8";
+  }
+
+  .header .inner-menu .inner-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #00000086;
+  }
+
+  .header .inner-menu.active .inner-overlay {
+    left: 0;
   }
 
   .header .inner-menu-mobile {
