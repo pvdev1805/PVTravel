@@ -58,3 +58,71 @@ if (boxAddressSection1) {
   }
 }
 // End Box Address - Section 1
+
+// Box User - Section 1
+const boxUserSection1 = document.querySelector(
+  ".section-1 .inner-form .inner-user"
+);
+if (boxUserSection1) {
+  const input = boxUserSection1.querySelector(".inner-input");
+
+  // Show Box Quantity Suggest
+  input.addEventListener("focus", () => {
+    boxUserSection1.classList.add("active");
+  });
+
+  // Hide Box Quantity Suggest
+  document.addEventListener("click", (event) => {
+    if (!boxUserSection1.contains(event.target)) {
+      boxUserSection1.classList.remove("active");
+    }
+  });
+
+  // Increase/Decrease Quantity input value
+  const updateQuantityInput = () => {
+    const listBoxNumber = boxUserSection1.querySelectorAll(
+      ".inner-count .inner-number"
+    );
+    const listNumber = [];
+    listBoxNumber.forEach((boxNumber) => {
+      const number = parseInt(boxNumber.innerHTML);
+      listNumber.push(number);
+    });
+
+    const value = `Adult: ${listNumber[0]} - Child: ${listNumber[1]} - Infant: ${listNumber[2]}`;
+    input.value = value;
+  };
+
+  // Resolve onClick event for "+" button
+  const listButtonUp = boxUserSection1.querySelectorAll(
+    ".inner-count .inner-up"
+  );
+  listButtonUp.forEach((button) => {
+    button.addEventListener("click", () => {
+      const parent = button.parentNode;
+      const boxNumber = parent.querySelector(".inner-number");
+      const number = parseInt(boxNumber.innerHTML);
+      const numberUpdate = number + 1;
+      boxNumber.innerHTML = numberUpdate;
+      updateQuantityInput();
+    });
+  });
+
+  // Resolve onClick event for "-" button
+  const listButtonDown = boxUserSection1.querySelectorAll(
+    ".inner-count .inner-down"
+  );
+  listButtonDown.forEach((button) => {
+    button.addEventListener("click", () => {
+      const parent = button.parentNode;
+      const boxNumber = parent.querySelector(".inner-number");
+      const number = parseInt(boxNumber.innerHTML);
+      if (number > 0) {
+        const numberUpdate = number - 1;
+        boxNumber.innerHTML = numberUpdate;
+        updateQuantityInput();
+      }
+    });
+  });
+}
+// End Box User - Section 1
