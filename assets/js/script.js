@@ -27,3 +27,34 @@ if (buttonMenuMobile) {
   }
 }
 // End Menu Mobile
+
+// Box Address - Section 1
+const boxAddressSection1 = document.querySelector(
+  ".section-1 .inner-form .inner-address"
+);
+if (boxAddressSection1) {
+  // Show/Hide Box Suggest
+  const input = boxAddressSection1.querySelector(".inner-input");
+
+  input.addEventListener("focus", () => {
+    boxAddressSection1.classList.add("active");
+  });
+
+  input.addEventListener("blur", () => {
+    boxAddressSection1.classList.remove("active");
+  });
+
+  // Choose Address by click on the Suggest Item
+  const listItem = boxAddressSection1.querySelectorAll(
+    ".inner-suggest-list .inner-item"
+  );
+  if (listItem.length > 0) {
+    listItem.forEach((item) => {
+      item.addEventListener("mousedown", () => {
+        const title = item.querySelector(".inner-item-title").innerHTML.trim();
+        input.value = title;
+      });
+    });
+  }
+}
+// End Box Address - Section 1
