@@ -189,3 +189,20 @@ if (buttonFilterMobile) {
   });
 }
 // End Box Filter - Section 9
+
+// Box Tour Info - Section 10
+const boxTourInfo = document.querySelector(".section-10 .box-tour-info");
+if (boxTourInfo) {
+  const buttonViewMore = boxTourInfo.querySelector(".inner-read-more button");
+
+  buttonViewMore.addEventListener("click", () => {
+    if (boxTourInfo.classList.contains("active")) {
+      boxTourInfo.classList.remove("active");
+      buttonViewMore.innerHTML = "View More";
+    } else {
+      boxTourInfo.classList.add("active");
+      buttonViewMore.innerHTML = "View Less";
+    }
+  });
+}
+// End Box Tour Info - Section 10

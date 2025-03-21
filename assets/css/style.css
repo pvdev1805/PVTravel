@@ -2274,6 +2274,15 @@ img {
   color: var(--primary-color);
 }
 
+.box-tour-info .inner-content {
+  height: 500px;
+  overflow: hidden;
+}
+
+.box-tour-info.active .inner-content {
+  height: auto;
+}
+
 .box-tour-info .inner-content p {
   font-size: 14px;
   font-weight: 300;
