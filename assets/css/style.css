@@ -666,17 +666,28 @@ img {
   margin-bottom: 47px;
 }
 
-.section-2 .inner-info .inner-clock-number span {
+.section-2 .inner-info .inner-clock-number .inner-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 57px;
   height: 57px;
   background-color: #fff;
   border-radius: 10px;
   font-size: 30px;
   font-weight: 700;
+}
+
+.section-2 .inner-info .inner-clock-number .inner-item .inner-number {
   color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section-2 .inner-info .inner-clock-number .inner-item .inner-label {
+  font-size: 11px;
+  font-weight: 500;
 }
 
 .section-2 .inner-info .inner-discount-title {

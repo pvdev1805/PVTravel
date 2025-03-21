@@ -126,3 +126,45 @@ if (boxUserSection1) {
   });
 }
 // End Box User - Section 1
+
+// Clock Expire - Section 2
+const clockExpire = document.querySelector("[clock-expire]");
+
+if (clockExpire) {
+  const expireDateTimeString = clockExpire.getAttribute("clock-expire");
+
+  // Convert DateTime String to DateTime Object
+  const expireDateTime = new Date(expireDateTimeString);
+
+  // Function to update Clock Expire
+  const updateClock = () => {
+    const now = new Date();
+    const remainingTime = expireDateTime - now;
+
+    if (remainingTime > 0) {
+      // Calculate remaining days
+      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+
+      // Calculate remaining hours
+      const hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24);
+
+      // Calculate remaining minutes
+      const minutes = Math.floor((remainingTime / (1000 * 60)) % 60);
+
+      // Calculate remaining seconds
+      const seconds = Math.floor((remainingTime / 1000) % 60);
+
+      const listBoxNumber = clockExpire.querySelectorAll(".inner-number");
+      listBoxNumber[0].innerHTML = `${days}`.padStart(2, "0");
+      listBoxNumber[1].innerHTML = `${hours}`.padStart(2, "0");
+      listBoxNumber[2].innerHTML = `${minutes}`.padStart(2, "0");
+      listBoxNumber[3].innerHTML = `${seconds}`.padStart(2, "0");
+    } else {
+      clearInterval(intervalClock);
+    }
+  };
+
+  // Call the updateClock function every 1 second
+  const intervalClock = setInterval(updateClock, 1000);
+}
+// End Clock Expire - Section 2
