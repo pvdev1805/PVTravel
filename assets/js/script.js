@@ -168,3 +168,24 @@ if (clockExpire) {
   const intervalClock = setInterval(updateClock, 1000);
 }
 // End Clock Expire - Section 2
+
+// Box Filter - Section 9
+const buttonFilterMobile = document.querySelector(
+  ".section-9 .inner-filter-mobile"
+);
+
+if (buttonFilterMobile) {
+  const boxLeft = document.querySelector(".section-9 .inner-left");
+
+  buttonFilterMobile.addEventListener("click", () => {
+    boxLeft.classList.add("active");
+  });
+
+  const overlay = document.querySelector(
+    ".section-9 .inner-left .inner-overlay"
+  );
+  overlay.addEventListener("click", () => {
+    boxLeft.classList.remove("active");
+  });
+}
+// End Box Filter - Section 9
