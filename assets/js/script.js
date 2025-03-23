@@ -206,3 +206,7 @@ if (boxTourInfo) {
   });
 }
 // End Box Tour Info - Section 10
+
+// Initialize AOS
+AOS.init();
+// End Initialize AOS
