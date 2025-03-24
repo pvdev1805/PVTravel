@@ -269,3 +269,29 @@ if (swiperSection3) {
   });
 }
 // End Swiper Section 3
+
+// Swiper Box Images - Section 10
+const boxImages = document.querySelector(".box-images");
+if (boxImages) {
+  const swiperBoxImagesThumb = new Swiper(".swiper-box-images-thumb", {
+    spaceBetween: 5,
+    slidesPerView: 4,
+    breakpoints: {
+      576: {
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  const swiperBoxImagesMain = new Swiper(".swiper-box-images-main", {
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiperBoxImagesThumb,
+    },
+  });
+}
+// End Swiper Box Images - Section 10
