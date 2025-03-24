@@ -204,6 +204,8 @@ if (boxTourInfo) {
       buttonViewMore.innerHTML = "View Less";
     }
   });
+
+  new Viewer(boxTourInfo);
 }
 // End Box Tour Info - Section 10
 
@@ -295,3 +297,17 @@ if (boxImages) {
   });
 }
 // End Swiper Box Images - Section 10
+
+// ViewerJS - Zoom Box Images Main
+const boxImageMain = document.querySelector(".box-images .inner-images-main");
+if (boxImageMain) {
+  new Viewer(boxImageMain);
+}
+// End ViewerJS - Zoom Box Images Main
+
+// ViewerJS - Zoom Box Tour Schedule
+const boxTourSchedule = document.querySelector(".box-tour-schedule");
+if (boxTourSchedule) {
+  new Viewer(boxTourSchedule);
+}
+// End ViewerJS - Zoom Box Tour Schedule
