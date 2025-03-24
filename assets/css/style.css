@@ -951,6 +951,27 @@ img {
 
 /* End Product Item */
 
+/* Box Title */
+.box-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* Responsive Box Title */
+@media screen and (max-width: 991.98px) {
+  .box-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+}
+/* End Responsive Box Title */
+
+/* End Box Title */
+
 /* Section 3 */
 .section-3 {
   padding-bottom: 60px;
