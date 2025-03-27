@@ -353,3 +353,63 @@ if (couponForm) {
     });
 }
 // End JustValidate - Coupon Form
+
+// JustValidate - Order Form
+const orderForm = document.querySelector("#order-form");
+if (orderForm) {
+  const validator = new JustValidate("#order-form");
+
+  validator
+    .addField("#full-name-input", [
+      {
+        rule: "required",
+        errorMessage: "Full Name is required",
+      },
+      {
+        rule: "minLength",
+        value: 5,
+        errorMessage: "Full Name must be at least 5 characters",
+      },
+      {
+        rule: "maxLength",
+        value: 50,
+        errorMessage: "Full Name must not exceed 50 characters",
+      },
+    ])
+    .addField("#phone-input", [
+      {
+        rule: "required",
+        errorMessage: "Phone is required",
+      },
+      {
+        rule: "customRegexp",
+        value: /^(?:\+?61|0)[2-578]\d{2}\s?\d{3}\s?\d{3}$/g,
+      },
+    ])
+    .onSuccess((event) => {
+      const fullName = event.target.fullName.value;
+      const phone = event.target.phone.value;
+      const note = event.target.note.value;
+      const method = event.target.method.value;
+
+      console.log(fullName);
+      console.log(phone);
+      console.log(note);
+      console.log(method);
+    });
+
+  // List Input Method
+  const listInputMethod = orderForm.querySelectorAll(`input[name="method"]`);
+  const elementInfoBank = orderForm.querySelector(".inner-info-bank");
+
+  listInputMethod.forEach((inputMethod) => {
+    inputMethod.addEventListener("change", () => {
+      if (inputMethod.value === "bank") {
+        elementInfoBank.classList.add("active");
+      } else {
+        elementInfoBank.classList.remove("active");
+      }
+    });
+  });
+}
+// End JustValidate - Order Form

@@ -2920,8 +2920,27 @@ img {
 .section-12 .inner-info .inner-inputs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px 20px;
-  margin-bottom: 15px;
+  gap: 25px 20px;
+  margin-bottom: 25px;
+}
+
+.section-12 .inner-info .inner-input {
+  position: relative;
+}
+
+.section-12 .inner-info .inner-input .just-validate-error-label {
+  position: absolute;
+  top: 104%;
+  left: 14px;
+  font-size: 12px;
+}
+
+.section-12 .inner-info .inner-input .just-validate-error-field {
+  border-color: #f9313d;
+}
+
+.section-12 .inner-info .inner-input .just-validate-success-field {
+  border-color: #00b289;
 }
 
 .section-12 .inner-info input,
@@ -2979,6 +2998,11 @@ img {
   border-radius: 4.25px;
   padding: 15px;
   margin-top: 20px;
+  display: none;
+}
+
+.section-12 .inner-method .inner-info-bank.active {
+  display: block;
 }
 
 .section-12 .inner-method .inner-info-bank .inner-title {

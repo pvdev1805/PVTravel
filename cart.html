@@ -357,13 +357,27 @@
     <section class="section-12">
       <div class="container">
         <div class="inner-wrap">
-          <form action="">
+          <form action="" id="order-form">
             <div class="inner-info">
               <div class="inner-title-main">Customer Information</div>
 
               <div class="inner-inputs">
-                <input type="text" name="fullName" placeholder="Full Name" />
-                <input type="text" name="phone" placeholder="Phone Number" />
+                <div class="inner-input">
+                  <input
+                    id="full-name-input"
+                    type="text"
+                    name="fullName"
+                    placeholder="Full Name"
+                  />
+                </div>
+                <div class="inner-input">
+                  <input
+                    id="phone-input"
+                    type="text"
+                    name="phone"
+                    placeholder="Phone Number"
+                  />
+                </div>
               </div>
 
               <textarea name="note" placeholder="Note..."></textarea>
@@ -374,17 +388,43 @@
 
               <div class="inner-list">
                 <div class="inner-item">
-                  <input type="radio" name="method" id="methodCash" />
+                  <input
+                    type="radio"
+                    name="method"
+                    value="cash"
+                    id="methodCash"
+                    checked
+                  />
                   <label for="methodCash"> Cash </label>
                 </div>
 
                 <div class="inner-item">
-                  <input type="radio" name="method" id="methodCard" />
+                  <input
+                    type="radio"
+                    name="method"
+                    value="card"
+                    id="methodCard"
+                  />
                   <label for="methodCard"> Credit/Debit Card </label>
                 </div>
 
                 <div class="inner-item">
-                  <input type="radio" name="method" id="methodBank" checked />
+                  <input
+                    type="radio"
+                    name="method"
+                    value="paypal"
+                    id="methodPaypal"
+                  />
+                  <label for="methodPaypal"> PayPal </label>
+                </div>
+
+                <div class="inner-item">
+                  <input
+                    type="radio"
+                    name="method"
+                    value="bank"
+                    id="methodBank"
+                  />
                   <label for="methodBank"> Bank Transfer </label>
                 </div>
               </div>
