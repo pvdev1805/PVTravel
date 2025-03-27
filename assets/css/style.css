@@ -2728,12 +2728,20 @@ img {
 .section-11 .inner-coupon {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .section-11 .inner-coupon form {
   width: 50%;
   display: flex;
+  position: relative;
+}
+
+.section-11 .inner-coupon form .just-validate-error-label {
+  position: absolute;
+  top: 104%;
+  left: 0;
+  font-size: 12px;
 }
 
 .section-11 .inner-coupon form input {

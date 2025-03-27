@@ -334,3 +334,22 @@ if (emailForm) {
     });
 }
 // End JustValidate - Email Form
+
+// JustValidate - Coupon Form
+const couponForm = document.querySelector("#coupon-form");
+if (couponForm) {
+  const validator = new JustValidate("#coupon-form");
+
+  validator
+    .addField("#coupon-input", [
+      {
+        rule: "required",
+        errorMessage: "Coupon is required",
+      },
+    ])
+    .onSuccess((event) => {
+      const coupon = event.target.coupon.value;
+      console.log(coupon);
+    });
+}
+// End JustValidate - Coupon Form
