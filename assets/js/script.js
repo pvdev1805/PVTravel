@@ -311,3 +311,26 @@ if (boxTourSchedule) {
   new Viewer(boxTourSchedule);
 }
 // End ViewerJS - Zoom Box Tour Schedule
+
+// JustValidate - Email Form
+const emailForm = document.querySelector("#email-form");
+if (emailForm) {
+  const validator = new JustValidate("#email-form");
+
+  validator
+    .addField("#email-input", [
+      {
+        rule: "required",
+        errorMessage: "Email is required",
+      },
+      {
+        rule: "email",
+        errorMessage: "Email is invalid",
+      },
+    ])
+    .onSuccess((event) => {
+      const email = event.target.email.value;
+      console.log(email);
+    });
+}
+// End JustValidate - Email Form

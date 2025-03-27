@@ -1365,6 +1365,15 @@ img {
   padding: 12px;
   display: flex;
   gap: 12px;
+  position: relative;
+}
+
+.footer .inner-top .inner-form .just-validate-error-label {
+  position: absolute;
+  top: 110%;
+  left: 28px;
+  font-size: 14px;
+  color: #ffa1a1 !important;
 }
 
 .footer .inner-top .inner-form input {
@@ -1380,6 +1389,15 @@ img {
 
 .footer .inner-top .inner-form input::placeholder {
   color: #99a2a5;
+}
+
+.footer .inner-top .inner-form input.just-validate-error-field {
+  border-color: red;
+}
+
+.footer .inner-top .inner-form input.just-validate-success-field {
+  border-color: green;
+  color: green;
 }
 
 .footer .inner-top .inner-form button {
@@ -1546,6 +1564,10 @@ img {
     flex-wrap: wrap;
   }
 
+  .footer .inner-top .inner-form .just-validate-error-label {
+    top: 101%;
+  }
+
   .footer .inner-top .inner-form button {
     width: 100%;
     font-size: 14px;
@@ -1566,6 +1588,14 @@ img {
 
   .footer .inner-bottom .inner-links ul {
     gap: 10px 25px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .footer .inner-top .inner-form .just-validate-error-label {
+    top: 102%;
+    left: 20px;
+    font-size: 12px;
   }
 }
 

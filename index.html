@@ -1730,8 +1730,13 @@
             Sign up for the latest news and promotions
           </h2>
 
-          <form action="" class="inner-form">
-            <input type="email" placeholder="Enter your email..." />
+          <form action="" class="inner-form" id="email-form">
+            <input
+              id="email-input"
+              name="email"
+              type="email"
+              placeholder="Enter your email..."
+            />
             <button>Sign Up</button>
           </form>
         </div>
@@ -1847,6 +1852,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
