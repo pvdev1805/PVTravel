@@ -357,6 +357,26 @@ if (couponForm) {
 // JustValidate - Order Form
 const orderForm = document.querySelector("#order-form");
 if (orderForm) {
+  // Prevent user from entering non-numeric characters in the phone input field
+  const phoneInput = orderForm.querySelector("#phone-input");
+  phoneInput.addEventListener("keydown", (event) => {
+    // Allow Backspace, Delete, Arrow keys, and Tab keys
+    if (
+      event.key === "Backspace" ||
+      event.key === "Delete" ||
+      event.key === "ArrowLeft" ||
+      event.key === "ArrowRight" ||
+      event.key === "Tab"
+    ) {
+      return;
+    }
+
+    // Allow numeric characters (0-9) only
+    if (/[^0-9]/.test(event.key)) {
+      event.preventDefault();
+    }
+  });
+
   const validator = new JustValidate("#order-form");
 
   validator
@@ -383,7 +403,8 @@ if (orderForm) {
       },
       {
         rule: "customRegexp",
-        value: /^(?:\+?61|0)[2-578]\d{2}\s?\d{3}\s?\d{3}$/g,
+        value: /^(61|0)[2-578]\d{8}$/g,
+        errorMessage: "Phone number is invalid",
       },
     ])
     .onSuccess((event) => {

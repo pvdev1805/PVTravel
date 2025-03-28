@@ -1612,6 +1612,7 @@ img {
   position: fixed;
   right: 20px;
   bottom: 50px;
+  z-index: 1;
 }
 
 .box-contact ul {
@@ -2886,6 +2887,10 @@ img {
 
   .section-11 .inner-tour-item .inner-product .inner-meta .inner-meta-item {
     font-size: 12px;
+  }
+
+  .section-11 .inner-coupon form button {
+    padding: 0 14px;
   }
 }
 /* End Responsive Section 11 */
